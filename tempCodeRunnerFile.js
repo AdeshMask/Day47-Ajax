@@ -31,15 +31,15 @@ function makeAJAXCall (methodType, url, callback, async = true, data = null) {
     }
 
     //Step 1
-    const getURL="http://127.0.0.1:3000/employees/10";
+    const getURL="http://127.0.0.1:3000/employees/5";
     makeAJAXCall("GET", getURL, getUserDetails,true);
 
-    const deleteURL="http://localhost:3000/employees";
+    const deleteURL="http://localhost:3000/employees/5";
     function userDeleted (data) {
         console.log("User Deleted "+data)
     }
     makeAJAXCall("DELETE", deleteURL, userDeleted, false);
-    const postURL="http://localhost:3000/employees"; 
+    const postURL="http://localhost:3000/employees/5"; 
     const emplData = {"name": "Adesh","salary": "40000"};
     function userAdded (data) {
         console.log("User Added: "+data)
